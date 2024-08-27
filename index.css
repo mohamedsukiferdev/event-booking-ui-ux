@@ -1,0 +1,100 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgb(14, 2, 2);
+  color: white;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Base styling for the button */
+.send-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.send-btn .text {
+  display: inline-block;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.send-btn .material-symbols-outlined {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+/* Hover effect */
+.send-btn:hover .text {
+  opacity: 0;
+}
+
+.send-btn:hover .material-symbols-outlined {
+  transform: rotate(90deg);
+}
+
+
+/* media screen for header */
+ @media screen and (min-width: 0px) and (max-width: 768px) {
+  .home-top {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .about-content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main-con h1 {
+    font-size: clamp(2rem, 4vw, 32px);
+    margin: 1rem 0rem;
+  }
+  .content-box{
+    margin: 0rem;
+  }
+  .form-body{
+    display: block;
+  }
+  .form-heading,
+  .form-group{
+    margin: 1rem;
+  }
+
+}
+@media screen and (min-width:0px) and (max-width:768px) {
+  .desktop-header{
+    display: none;
+  }
+  .mobile-header{
+    display: block;
+  }
+}
+
+
+
+
